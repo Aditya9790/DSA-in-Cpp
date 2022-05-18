@@ -1,0 +1,1 @@
+ram 20 coep 123 static oop pen pencil compass laptop pen-drive
