@@ -39,3 +39,20 @@ int lengthOfLIS(vector<int> &nums)
     vector<vector<int>> dp(nums.size(), vector<int>(nums.size() + 1, -1));
     return LIS(nums, index, -1, dp);
 }
+
+/*
+
+Brute Force
+
+int LIS(vector<int> &nums, int index, int prev)
+    {
+        if(index >= nums.size()) return 0;
+        
+        int take = 0, not_take = LIS(nums, index+1, prev);
+        
+        if(prev < nums[index]) take = 1 + LIS(nums, index+1, nums[index]);
+        
+        return max(take, not_take);
+        
+    }
+*/
